@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps Example</title>
+  <style>
+    /* CSS styles for the map container */
+    #map {
+      height: 100px; /* Adjust the height as needed */
+      width: 100%; /* Use full width */
+    }
+  </style>
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-family: Arial, sans-serif;
+        border: 1px solid #ddd;
+    }
+    .header {
+        text-align: center;
+        font-weight: bold;
+        font-size: 32px;
+        padding: 10px 0;
+        background-color: aquamarine;
+    }
+    .contact-heading {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    .first-column {
+        width: 5%;
+    }
+
+    .contact-info {
+        width: 20%;
+    }
+</style>
+</head>
+<body>
+  <header> <h1 class="header">OUR COLLECTION POINTS LOCATION</h1></header>
+  <br>
+  <div><h2 class="contact-heading">E-Waste Material Collection Points</h2>
+  <table border="1">
+      <thead>
+          <tr>
+              <th>Sr. No.</th>
+              <th>State</th>
+              <th>Location</th>
+              <th>Complete Address</th>
+              <th>Contact Person</th>
+              <th>Contact No</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td>1</td>
+            <td>Punjab</td>
+            <td>Chandigarh</td>
+            <td>Plot-398 1st Floor Industrial Area Phase-1, Panchkula-134109</td>
+            <td>Mr. Ram Lal</td>
+            <td>9915700209</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>Andhra Pradesh</td>
+              <td>Vijayawada</td>
+              <td>2nd Floor, Krishna Plaza, Opp- Innotel Hotel, Ramavarapadu Ring Road, Krishna District, Vijayawada - 521101</td>
+              <td>Mr. Pappu Mandal</td>
+              <td>9392134121</td>
+          </tr>
+          <!-- Row 2 -->
+          <tr>
+              <td>3</td>
+              <td>Assam</td>
+              <td>Guwahati</td>
+              <td>Jatin Tamuli Complex, 2nd Floor, Opp Maruti Service Near Sarusojai National Game Stadium, Lokhra Road, Nh-37, Guwahati-781034</td>
+              <td>Mr. Rohit Kumar</td>
+              <td>8811024447</td>
+          </tr>
+          <!-- Row 3 -->
+          <!-- Row 4 -->
+          <tr>
+              <td>4</td>
+              <td>Assam</td>
+              <td>Tinsukia</td>
+              <td>Parvati Bhawan Jyoti Nagar Nau-Pukhari, Opp-Design And Designer Shope Tinsukia, Assam-Pin-786125</td>
+              <td>Mr. Rajesh Thakur</td>
+              <td>9319292749</td>
+          </tr>
+          <!-- Row 5 -->
+          <tr>
+              <td>5</td>
+              <td>Bihar</td>
+              <td>Patna</td>
+              <td>3rd Floor, Bam Bam Niwas, Near Ganapati Dental Hospital, Bhagwat Nagar Main Road, Kumhrar, Patna-800026 (Bihar)</td>
+              <td>Mr. Vikram Bhargav</td>
+              <td>7070990093</td>
+          </tr>
+          <!-- Row 6 -->
+          <tr>
+              <td>6</td>
+              <td>Bihar</td>
+              <td>Patna</td>
+              <td>Apml, Opp-Indian Oil Petrole Pump Nera Salasar Balaji Showroom Ranipur, Paijwa-800007</td>
+              <td>Mr. Surender</td>
+              <td>9771421120</td>
+          </tr>
+          <!-- Row 7 -->
+          <tr>
+              <td>7</td>
+              <td>Chhattisgarh</td>
+              <td>Raipur</td>
+              <td>Buland Talpatri Udyog , Near Mohan Marriage Place, Opp. M.P Dhaba, Nagpur Highway, Tatiband ( Raipur ) - 492099</td>
+              <td>Mr. Tarun Kumar Pandey</td>
+              <td>9811306292</td>
+          </tr>
+          <!-- Row 8 -->
+         
+          <tr>
+              <td>8</td>
+              <td>Gujarat</td>
+              <td>Ahmedabad</td>
+              <td>Adarsh Farm, Bhind Khodal Hotel Sanathan Circul, Ahemdabad-382210</td>
+              <td>Mr. Satbir Choudhary</td>
+              <td>9328861377</td>
+          </tr>
+          <!-- Row 10 -->
+          <tr>
+              <td>9</td>
+              <td>Gujarat</td>
+              <td>Ahmedabad</td>
+              <td>5/A 5th Floor, New York Corner B/H Kiran Motors, Opp.Rajpath Club, Bodakdev, Ahmedabad-380054</td>
+              <td>Mr. Pawan Sharma</td>
+              <td>9377990029</td>
+          </tr>
+          <!-- Row 11 -->
+<tr>
+  <td>10</td>
+  <td>Gujarat</td>
+  <td>Baroda</td>
+  <td>Prashar Road Carriers Pvt. Ltd. Shop No. D1 Maruti Estate, Near Vadodara Halol, Toll Naka Golden Chowkdi Behind Choudhary Farm, Vadodara - 390022</td>
+  <td>Mr. Baljeet Sharma</td>
+  <td>9227549113</td>
+</tr>
+<!-- Row 12 -->
+<tr>
+  <td>11</td>
+  <td>Gujarat</td>
+  <td>Vapi</td>
+  <td>Prashar Road Carriers Pvt. Ltd. Plot No. 785/1, 40 Shed Area Gidc Vapi-396195</td>
+  <td>Mr. Wazir</td>
+  <td>9825146830</td>
+</tr>
+<!-- Row 13 -->
+<tr>
+  <td>12</td>
+  <td>Haryana</td>
+  <td>Gurgaon</td>
+  <td>Prashar Road Carriers Pvt. Ltd. Vill Naharpurrups Near NH , Shri Krishna Dharam Kanta Opp Anaj Mandi</td>
+  <td>Mr. Jitender</td>
+  <td>9319254621</td>
+</tr>
+<!-- Row 14 -->
+<tr>
+  <td>13</td>
+  <td>Jammu</td>
+  <td>Jammu</td>
+  <td>Hno.385/1 Sector-1 Channi Himmat Near Sanfort School, Jammu -180015 (India)</td>
+  <td>Mr. Keval Kishan</td>
+  <td>9311015402</td>
+</tr>
+<!-- Row 15 -->
+<tr>
+  <td>14</td>
+  <td>Jammu</td>
+  <td>Samba</td>
+  <td>Prashar Road Carriers Pvt. Ltd. Shop No 16 and 17, Rajindra Shopping Complex Opposite Bhargava College Chak Manga Rakwal, Samba-184121</td>
+  <td>Mr. Sandeep</td>
+  <td>9055691344</td>
+</tr>
+<!-- Row 16 -->
+<tr>
+  <td>15</td>
+  <td>Jharkhand</td>
+  <td>Ranchi</td>
+  <td>Surya Nagar Lal Ganj Tati Silvayi Ranchi-835103</td>
+  <td>Mr. Prabhakant Shukla</td>
+  <td>7070792310</td>
+</tr>
+<!-- Row 17 -->
+<tr>
+  <td>16</td>
+  <td>Jharkhand</td>
+  <td>Ranchi</td>
+  <td>Riya Plaza, Flat No- 201 A, Kokar Chowk, N. H.- 33, H. B. Road, Ranchi- 834001</td>
+  <td>Mr. Praveen Sharma</td>
+  <td>9304404106</td>
+</tr>
+<!-- Row 18 -->
+<tr>
+  <td>17</td>
+  <td>Karnataka</td>
+  <td>Bangalore</td>
+  <td>No. 1 2nd Cross, Lalbagh Road, Near Poornima Theatre, Bangalore – 560027</td>
+  <td>Mr. Mukesh Agarwal</td>
+  <td>9342794321</td>
+</tr>
+<!-- Row 19 -->
+<tr>
+  <td>18</td>
+  <td>Karnataka</td>
+  <td>Bangalore</td>
+  <td>#1/5 & 12/1, Kulavanahalli Vilage, Near Fosro Chemicals, Dobbespet, Nelamangala Taluk, Bangalore Urban 562132</td>
+  <td>Mr. Mukesh Agarwal</td>
+  <td>9342794321</td>
+</tr>
+<!-- Row 20 -->
+<tr>
+  <td>19</td>
+  <td>Karnataka</td>
+  <td>Bangalore</td>
+  <td>#28/A-3 Vishwaraiah Industrial Area, Near Graphite India Ltd, Mahadevapura Post, Bangalore 560048</td>
+  <td>Mr. Gyanendra Singh Gaur </td>
+  <td>9342794321</td>
+</tr>
+<!-- Row 21 -->
+<tr>
+  <td>20</td>
+  <td>Karnataka</td>
+  <td>Bangalore</td>
+  <td>#298, 3rd Floor, Smart Arcade, Ravi Kirloskar Layout, Peenya, Bangalore 560078</td>
+  <td>Mr. Dharmendra</td>
+  <td>9342794321</td>
+</tr>
+<!-- Row 22 -->
+<tr>
+  <td>21</td>
+  <td>Karnataka</td>
+  <td>Bangalore</td>
+  <td>Prashar Road Carriers Pvt. Ltd. S.Y No-14 Maruti Layout, Near Himalaya Durg Co. Tumkur Road No-21. KM Makali Post Dasanpura Hobali Banglore-562123</td>
+  <td>Mr. Suresh</td>
+  <td>9740534397</td>
+</tr>
+<!-- Row 23 -->
+<tr>
+  <td>22</td>
+  <td>Kerala</td>
+  <td>Aluva</td>
+  <td>PMK Building1/403 E Metro Pillar No 126 Nh47 Aimbattukave Aluva-Pin-683106</td>
+  <td>Ms. Sujata Anand</td>
+  <td>9388094321</td>
+</tr>
+<!-- Row 24 -->
+<tr>
+  <td>23</td>
+  <td>Kerala</td>
+  <td>Ernakulam</td>
+  <td>37/3440-C, Ponoth Building, Ponoth Road, Deshabhimani Jn., Kaloor, Ernakulam-682017</td>
+  <td>Ms. Sujata Anand</td>
+  <td>9388094321</td>
+</tr>
+<!-- Row 25 -->
+<tr>
+  <td>24</td>
+  <td>Madhya Pradesh</td>
+  <td>Bhopal</td>
+  <td>268/1 New Deepak Warehouse Rapadiya Teh.Huzur, Bhopal -462044</td>
+  <td>Mr. Nilesh Mishra</td>
+  <td>9300197385</td>
+</tr>
+<!-- Row 26 -->
+<tr>
+  <td>25</td>
+  <td>Madhya Pradesh</td>
+  <td>Bhopal</td>
+  <td>B-9, Commericial Complex, Above Central Bank Of India, Vidhya Nagar, Hoshangabad Road, Bhopal ( M.P. )-462026</td>
+  <td>Mr. Rahul Agarwal</td>
+  <td>9302529061</td>
+</tr>
+<!-- Row 27 -->
+<tr>
+  <td>26</td>
+  <td>Maharashtra</td>
+  <td>Bhiwandi</td>
+  <td>Prashar Road Carriers Pvt. Ltd. House No-302 2nd Floor Shri Samridh Kurpa Building Near Budhwar Mandir Purana Village Bhiwandi Thane-421302</td>
+  <td>Mr.Rahul</td>
+  <td>9376339191</td>
+</tr>
+<!-- Row 28 -->
+<tr>
+  <td>27</td>
+  <td>Maharashtra</td>
+  <td>Bhiwandi</td>
+  <td>Agarwal Compound, Nr. Bmc Pipe Line, Anjur Mankoli Road, Village Valpada, Bhiwandi 421302</td>
+  <td>Mr. Haritabh Sharma</td>
+  <td>9004398629</td>
+</tr>
+<!-- Row 29 -->
+<tr>
+  <td>28</td>
+  <td>Maharashtra</td>
+  <td>Bhiwandi</td>
+  <td>Bharat Warehouse/ Bhoi Compund , Binar Post Vadpe, Taluka Bhiwandi Distric Thane , Pin -421302</td>
+  <td>Mr. Haritabh Sharma</td>
+  <td>9004398629</td>
+</tr>
+<!-- Row 30 -->
+<tr>
+  <td>29</td>
+  <td>Maharashtra</td>
+  <td>Mumbai</td>
+  <td>APML,Manvali Village,Khalapur,Chowk Near HPCL Chowk Petrol pump On Old Mumbai-Pune Highway 410206</td>
+  <td>Mr. Baldev</td>
+  <td>8828105203</td>
+</tr>
+<!-- Row 31 -->
+<tr>
+  <td>30</td>
+  <td>Maharashtra</td>
+  <td>Mumbai</td>
+  <td>53,/1Opp-Pravashi Industrial State Vishweshwar Nagar Road Goregaon East Mumbai 400063</td>
+  <td>Mr. Baldev</td>
+  <td>9320644321</td>
+</tr>
+<!-- Row 32 -->
+<tr>
+  <td>31</td>
+  <td>Maharashtra</td>
+  <td>Mumbai</td>
+  <td>601/602, Eco Star Vishveshwar Nagar Road, Near Udipi Hotel, Goregaon (E), Mumbai-400063</td>
+  <td>Ms. Anuja</td>
+  <td>7738120017</td>
+</tr>
+<!-- Row 33 -->
+<tr>
+  <td>32</td>
+  <td>Maharashtra</td>
+  <td>Mumbai</td>
+  <td>S No.256/257 NH-6 At Dasarkhed ,Tq Malkapur Dist- Buldana Maharashtra -443112</td>
+  <td>Ms. Anuja</td>
+  <td>7738120017</td>
+</tr>
+<!-- Row 34 -->
+<tr>
+  <td>33</td>
+  <td>Maharashtra</td>
+  <td>Mumbai</td>
+  <td>Prashar Road Carriers Pvt. Ltd. 350/2 Canterl Facility Building No-2 APMC Market Sec-19 Vashi Navi Mumbai-400705</td>
+  <td>Mr. Manjeet Singh</td>
+  <td>9320141673</td>
+</tr>
+<!-- Row 35 -->
+<tr>
+  <td>34</td>
+  <td>Maharashtra</td>
+  <td>Pune</td>
+  <td>Dehu Alandi Road Shelar Vasti From Bharat Vajan Kanta, Chikhil Talwade, Pune-412114</td>
+  <td>Mr. Balwan Sharma</td>
+  <td>9325811152</td>
+</tr>
+<!-- Row 36 -->
+<tr>
+  <td>35</td>
+  <td>Odisha</td>
+  <td>Bhubaneswar</td>
+  <td>Agarwal Packers And Movers Ltd (APML) 47 C, Jaidurga Nagar, Near New Kalika South Indian Restaurant, Bhomikhal, Bhubaneswar Odisha - 751006</td>
+  <td>Mr. Bhagwan Sharma</td>
+  <td>9337774321</td>
+</tr>
+<!-- Row 37 -->
+<!-- Row 38 -->
+<tr>
+  <td>36</td>
+  <td>Rajasthan</td>
+  <td>Jaipur</td>
+  <td>363 Sector 3 Chitrakoot, Vaisali Nagar Jaipur 302021</td>
+  <td>Mr. Ghanshyam Agarwal</td>
+  <td>9460014001</td>
+</tr>
+<!-- Row 39 -->
+<tr>
+  <td>37</td>
+  <td>Rajasthan</td>
+  <td>Udaipur</td>
+  <td>APML Ground Floor Opp.Hotel Pearl Palace Dewali Kharwakunj Nr.Balicha By Pass Udaipur-313002</td>
+  <td>Mr. Dev Prakash</td>
+  <td>9314326899</td>
+</tr>
+<!-- Row 40 -->
+<tr>
+  <td>38</td>
+  <td>Tamil Nadu</td>
+  <td>Chennai</td>
+  <td>F-46, 3Rd Floor, Mangalam Complex, 1st Avenue, Anna Nagar East, Chennai - 600102 (India)</td>
+  <td>Mr. Vijender Verma</td>
+  <td>9840391140</td>
+</tr>
+<!-- Row 41 -->
+<tr>
+  <td>39</td>
+  <td>Tamil Nadu</td>
+  <td>Chennai</td>
+  <td>APML, 5/527A Dr.Vadai Street, Near Hanuman Temple Kottivakkam, Chennai-600041</td>
+  <td>Mr. Jagvir Singh</td>
+  <td>7338917444</td>
+</tr>
+<!-- Row 42 -->
+<tr>
+  <td>40</td>
+  <td>Tamil Nadu</td>
+  <td>Chennai</td>
+  <td>APML, No B-43 & 44, Sipcot Industrial Park Irrungatukottai Sriperumbudur, Kanchipuram, Chennai-602105</td>
+  <td>Mr. Balbeer Singh</td>
+  <td>8015846575</td>
+</tr>
+<!-- Row 43 -->
+<tr>
+  <td>41</td>
+  <td>Telangana</td>
+  <td>Medchal</td>
+  <td>C/O CS Reddy Godown 8-4-68, 889, Deveryamjal Road Shamerpet Mandal Opp-Sai Geeta Ashram Medchal-500014</td>
+  <td>Mr. Pardeep Jindal</td>
+  <td>9393278180</td>
+</tr>
+<!-- Row 44 -->
+<tr>
+  <td>42</td>
+  <td>Telangana</td>
+  <td>Hyderabad</td>
+  <td>Plot No.A15, Apie Opp-Varun Motors Balanagar Rr Dist. Hyderabad-500037</td>
+  <td>Mr. Ravinder Mandal</td>
+  <td>9701814653</td>
+</tr>
+<!-- Row 45 -->
+<tr>
+  <td>43</td>
+  <td>Telangana</td>
+  <td>Hyderabad</td>
+  <td>5-9-58/1-15, Plot Number -702, Babu Khan Estate Basheer Bagh, Hyderabad-500001</td>
+  <td>Mr. Sanjay Dasri</td>
+  <td>9390821276</td>
+</tr>
+<!-- Row 46 -->
+<tr>
+  <td>44</td>
+  <td>Uttar Pradesh</td>
+  <td>Lucknow</td>
+  <td>3/171, Vijyant Khand, Gomti Nagar, Lucknow, East Utter Pradesh, 226010 (India)</td>
+  <td>Mr. Jagmohan</td>
+  <td>9588159571</td>
+</tr>
+<!-- Row 47 -->
+<tr>
+  <td>45</td>
+  <td>Uttar Pradesh</td>
+  <td>Lucknow</td>
+  <td>Prashar Road Carriers Pvt. Ltd. E-133, Transport Nagar, Kanpur Road Lucknow</td>
+  <td>Mr. Inder shan</td>
+  <td>8738985261</td>
+</tr>
+<!-- Row 48 -->
+<tr>
+  <td>46</td>
+  <td>Uttar Pradesh</td>
+  <td>U.P. Border</td>
+  <td>Prashar Road Carriers Pvt. Ltd. Prem Crain Services Compound Near Telephone Exchange P.O. Chikaberpur U.P Border (Dist)</td>
+  <td>Mr. Vishnu Sharma</td>
+  <td>8851510350</td>
+</tr>
+<!-- Row 49 -->
+<tr>
+  <td>47</td>
+  <td>Uttarakhand</td>
+  <td>Dehradun</td>
+  <td>A-03 Transport Nagar Dehradun-248006</td>
+  <td>Mr. Mukesh Kumar</td>
+  <td>9359694256</td>
+</tr>
+<!-- Row 50 -->
+<tr>
+  <td>48</td>
+  <td>West Bengal</td>
+  <td>Kolkata</td>
+  <td>245A, Block-J, New Alipur, Kolkata -700053 (India)</td>
+  <td>Mr. Satrupa Das Gupta</td>
+  <td>9007734221</td>
+</tr>
+<!-- Row 51 -->
+<tr>
+  <td>49</td>
+  <td>West Bengal</td>
+  <td>Kolkata</td>
+  <td>Prashar Road Carriers Pvt. Ltd. Room No-103, 1st Floor Himalaya Plaza Opp FCI Godown Dhankuni Hooghly-712311</td>
+  <td>Mr. Kishan</td>
+  <td>7890822716</td>
+</tr>
+<tr>
+  <td>50</td>
+  <td>Assam</td>
+  <td>Kamrup</td>
+  <td>Vision Warehousing Near Tata Motor Madanpur Dorakahara Kamrup 781101</td>
+  <td>Mr. Rohit Agarwal</td>
+  <td>8811075003</td>
+</tr>
+
+
+      </tbody>
+  </table>
+  <br/><br/><br/>
+</div>
+<iframe src="https://www.google.com/maps/d/embed?mid=1ojFCcDAbM7x7wvi6ew2f_5w4NOsLGpc&ehbc=2E312F" width="100%" height="480"></iframe>
+  <!-- Container for the map -->
+  <div id="map"></div>
+  <!-- Include the Google Maps JavaScript API with your API key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCheV-nnuHrcHgC-xuJ69mUUrYWIvsWkLk&libraries=places" async defer></script>
+
+
+  <script>
+    // Initialize and display the map
+    function initMap() {
+      // Specify the coordinates for the center of the map
+      const mapLocation = { lat: 37.7749, lng: -122.4194 }; // Example coordinates for San Francisco
+      
+      // Create a new map object, centered at the specified location
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10, // Adjust the zoom level as needed
+        center: mapLocation,
+      });
+      
+      // Add a marker to the map at the specified location
+      const marker = new google.maps.Marker({
+        position: mapLocation,
+        map: map,
+        title: "Hello World!" // Optional title for the marker
+      });
+    }
+  </script>
+</body>
+</html>
